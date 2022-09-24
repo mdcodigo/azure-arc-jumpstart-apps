@@ -18,6 +18,13 @@ maintainers:
 engine: gotpl
 kubeVersion: ">=1.19.0-0"
 annotations:
+  #### Session Affinity ####
+  nginx.ingress.kubernetes.io/affinity: "cookie"
+  nginx.ingress.kubernetes.io/session-cookie-expires: "120"
+  nginx.ingress.kubernetes.io/session-cookie-max-age: "120"
+  nginx.ingress.kubernetes.io/affinity-mode: "persistent"
+  nginx.ingress.kubernetes.io/session-cookie-secure: "false"
+  ####   
   # Use this annotation to indicate that this chart version is a pre-release.
   # https://artifacthub.io/docs/topics/annotations/helm/
   artifacthub.io/prerelease: "false"
