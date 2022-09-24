@@ -3,6 +3,7 @@ kind: HelmRelease
 metadata:
   name: ingress-nginx
   namespace: ingress-nginx
+  changenr: 1
   annotations:
     clusterconfig.azure.com/use-managed-source: "true"
 spec:
